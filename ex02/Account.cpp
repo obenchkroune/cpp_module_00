@@ -10,18 +10,18 @@ int Account::_totalNbWithdrawals = 0;
 
 void Account::_displayTimestamp(void)
 {
-    // std::time_t currentTime = std::time(0);
-    // std::tm *localTime = std::localtime(&currentTime);
+    std::time_t currentTime = std::time(0);
+    std::tm *localTime = std::localtime(&currentTime);
 
-    // std::cout << "["
-    //    << (localTime->tm_year + 1900)
-    //    << std::setw(2) << std::setfill('0') << (localTime->tm_mon + 1)
-    //    << std::setw(2) << std::setfill('0') << localTime->tm_mday
-    //    << "_"
-    //    << std::setw(2) << std::setfill('0') << localTime->tm_hour
-    //    << std::setw(2) << std::setfill('0') << localTime->tm_min
-    //    << std::setw(2) << std::setfill('0') << localTime->tm_sec
-    //    << "] ";
+    std::cout << "["
+       << (localTime->tm_year + 1900)
+       << std::setw(2) << std::setfill('0') << (localTime->tm_mon + 1)
+       << std::setw(2) << std::setfill('0') << localTime->tm_mday
+       << "_"
+       << std::setw(2) << std::setfill('0') << localTime->tm_hour
+       << std::setw(2) << std::setfill('0') << localTime->tm_min
+       << std::setw(2) << std::setfill('0') << localTime->tm_sec
+       << "] ";
 }
 
 Account::Account(int initial_deposit)
@@ -96,7 +96,7 @@ bool Account::makeWithdrawal(int amount)
 {
     int p_amount = this->_amount;
     
-    if (this->_amount < amount) // index:0;p_amount:47;withdrawal:refused
+    if (this->_amount < amount)
     {
         std::cout << "index:" << this->_accountIndex << ";"
             << "p_amount:" << p_amount << ";"
