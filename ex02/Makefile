@@ -1,6 +1,6 @@
 CXX			=	c++
 CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98 -I.
-SRC			=	$(shell find . -type f -name '*.cpp')
+SRC			=	Account.cpp tests.cpp
 OBJ			=	$(SRC:.cpp=.o)
 NAME		=	account
 RM			=	rm -rf
