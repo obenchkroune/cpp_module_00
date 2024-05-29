@@ -1,4 +1,4 @@
-#include <Contact.hpp>
+#include "../inc/Contact.hpp"
 
 void Contact::promptField(std::string& field, std::string field_name)
 {
